@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -35,7 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
         return true
     }
 
-    
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         
         
@@ -130,7 +128,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
             print("Google sign in error happened.", error )
             return
         }
-        
         
         guard let authentication = user.authentication else { return }
         

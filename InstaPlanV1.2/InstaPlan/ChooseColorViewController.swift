@@ -8,15 +8,13 @@
 
 import UIKit
 
-var classPickedColor: String!
-var assignmentPickedColor: String!
-var taskPickedColor: String!
-var askfrom: String!
+var pickedColor = ""
 
 class ChooseColorViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate  {
 
 
     @IBOutlet weak var colorPicker: UIPickerView!
+    
     
     let pickerData = ["Blue", "Brown", "DarkGray", "Green", "Magenta", "Orange", "Red", "Yellow", "While"]
     
@@ -30,11 +28,20 @@ class ChooseColorViewController: UIViewController, UIPickerViewDataSource,UIPick
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickedColor = pickerData[pickerView.selectedRow(inComponent: 0)]
+    }
    
 
+    func updateAllUI() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UpdateChooseColorButton"), object: nil)
+    }
+    
     @IBAction func done_action(_ sender: Any) {
         self.view.removeFromSuperview()
-        askfrom = ""
+        updateAllUI()
+        chooseColorFrom = ""
+        pickedColor = ""
     }
     
     
@@ -45,6 +52,7 @@ class ChooseColorViewController: UIViewController, UIPickerViewDataSource,UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
         return pickerData.count
     }
 
@@ -72,19 +80,5 @@ class ChooseColorViewController: UIViewController, UIPickerViewDataSource,UIPick
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         return 200
     }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        switch askfrom {
-        case "class":
-            classPickedColor = "Class Color: " + pickerData[row]
-        case "assignment":
-            assignmentPickedColor = "Assignment Color: " + pickerData[row]
-        case "task":
-            taskPickedColor = "Task Color: " + pickerData[row]
-        default:
-            print("some error happened.")
-        }
-    }
-    
     
 }

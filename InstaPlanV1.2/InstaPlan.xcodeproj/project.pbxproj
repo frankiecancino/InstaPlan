@@ -20,8 +20,26 @@
 		B01384F11E9DCC81008877DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01384F01E9DCC81008877DD /* Main.storyboard */; };
 		B01527281E9DF171009417C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B01527271E9DF171009417C8 /* GoogleService-Info.plist */; };
 		B01B6D3F1E9ED00B009AF220 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01B6D3E1E9ED00B009AF220 /* HomePage.storyboard */; };
+		B028AFC81EA758F100112C72 /* AddClassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028AFC71EA758F100112C72 /* AddClassController.swift */; };
+		B02D690C1EA803F300E27036 /* PickWeekDaysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02D690B1EA803F300E27036 /* PickWeekDaysController.swift */; };
+		B02D690E1EA88E1C00E27036 /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B02D690D1EA88E1C00E27036 /* SpeechToTextV1.framework */; };
+		B02D69121EA88FC500E27036 /* SpeechToTextCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02D69111EA88FC500E27036 /* SpeechToTextCredentials.swift */; };
+		B02D69141EA88FF400E27036 /* TextToSpeechCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02D69131EA88FF400E27036 /* TextToSpeechCredentials.swift */; };
+		B03298451EB006E5002491B8 /* InstaPlanUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032983B1EB006E5002491B8 /* InstaPlanUser+CoreDataClass.swift */; };
+		B03298461EB006E5002491B8 /* InstaPlanUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032983C1EB006E5002491B8 /* InstaPlanUser+CoreDataProperties.swift */; };
+		B03298471EB006E5002491B8 /* Assignment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032983D1EB006E5002491B8 /* Assignment+CoreDataClass.swift */; };
+		B03298481EB006E5002491B8 /* Assignment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032983E1EB006E5002491B8 /* Assignment+CoreDataProperties.swift */; };
+		B03298491EB006E5002491B8 /* Setting+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032983F1EB006E5002491B8 /* Setting+CoreDataClass.swift */; };
+		B032984A1EB006E5002491B8 /* Setting+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03298401EB006E5002491B8 /* Setting+CoreDataProperties.swift */; };
+		B032984B1EB006E5002491B8 /* CustomNotes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03298411EB006E5002491B8 /* CustomNotes+CoreDataClass.swift */; };
+		B032984C1EB006E5002491B8 /* CustomNotes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03298421EB006E5002491B8 /* CustomNotes+CoreDataProperties.swift */; };
+		B032984D1EB006E5002491B8 /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03298431EB006E5002491B8 /* Course+CoreDataClass.swift */; };
+		B032984E1EB006E5002491B8 /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03298441EB006E5002491B8 /* Course+CoreDataProperties.swift */; };
 		B04EA0471E9DDBAB00BA12CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04EA0461E9DDBAB00BA12CE /* ViewController.swift */; };
+		B0558DAD1EA934EB00CEACC8 /* TextToSpeechV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0558DAC1EA934EB00CEACC8 /* TextToSpeechV1.framework */; };
+		B0558DB01EA93A3100CEACC8 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0558DAF1EA93A3100CEACC8 /* RestKit.framework */; };
 		B07782D91EA1FC5700309625 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07782D81EA1FC5700309625 /* AddItemViewController.swift */; };
+		B0916D191EAFB05F000D443D /* AddCustomNotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0916D181EAFB05F000D443D /* AddCustomNotesController.swift */; };
 		B0A8CF461E9DCA13002D06AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A8CF451E9DCA13002D06AC /* AppDelegate.swift */; };
 		B0A8CF4E1E9DCA13002D06AC /* InstaPlan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0A8CF4C1E9DCA13002D06AC /* InstaPlan.xcdatamodeld */; };
 		B0A8CF501E9DCA13002D06AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A8CF4F1E9DCA13002D06AC /* Assets.xcassets */; };
@@ -48,8 +66,26 @@
 		B013850E1E9DD564008877DD /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		B01527271E9DF171009417C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B01B6D3E1E9ED00B009AF220 /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
+		B028AFC71EA758F100112C72 /* AddClassController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassController.swift; sourceTree = "<group>"; };
+		B02D690B1EA803F300E27036 /* PickWeekDaysController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickWeekDaysController.swift; sourceTree = "<group>"; };
+		B02D690D1EA88E1C00E27036 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
+		B02D69111EA88FC500E27036 /* SpeechToTextCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechToTextCredentials.swift; sourceTree = "<group>"; };
+		B02D69131EA88FF400E27036 /* TextToSpeechCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeechCredentials.swift; sourceTree = "<group>"; };
+		B032983B1EB006E5002491B8 /* InstaPlanUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InstaPlanUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B032983C1EB006E5002491B8 /* InstaPlanUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InstaPlanUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B032983D1EB006E5002491B8 /* Assignment+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assignment+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B032983E1EB006E5002491B8 /* Assignment+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assignment+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B032983F1EB006E5002491B8 /* Setting+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Setting+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B03298401EB006E5002491B8 /* Setting+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Setting+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B03298411EB006E5002491B8 /* CustomNotes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CustomNotes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B03298421EB006E5002491B8 /* CustomNotes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CustomNotes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B03298431EB006E5002491B8 /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B03298441EB006E5002491B8 /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B04EA0461E9DDBAB00BA12CE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0558DAC1EA934EB00CEACC8 /* TextToSpeechV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextToSpeechV1.framework; path = Carthage/Build/iOS/TextToSpeechV1.framework; sourceTree = "<group>"; };
+		B0558DAF1EA93A3100CEACC8 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
 		B07782D81EA1FC5700309625 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		B0916D181EAFB05F000D443D /* AddCustomNotesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCustomNotesController.swift; sourceTree = "<group>"; };
 		B0A8CF421E9DCA13002D06AC /* InstaPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A8CF451E9DCA13002D06AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0A8CF4D1E9DCA13002D06AC /* InstaPlan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InstaPlan.xcdatamodel; sourceTree = "<group>"; };
@@ -69,6 +105,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D8A044369908E3201EEF5EF /* Pods_InstaPlan.framework in Frameworks */,
+				B0558DB01EA93A3100CEACC8 /* RestKit.framework in Frameworks */,
+				B0558DAD1EA934EB00CEACC8 /* TextToSpeechV1.framework in Frameworks */,
+				B02D690E1EA88E1C00E27036 /* SpeechToTextV1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +121,23 @@
 				B9241EEF782B9D33D3A91994 /* Pods-InstaPlan.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B0916D1A1EAFB066000D443D /* AddCustomNotes */ = {
+			isa = PBXGroup;
+			children = (
+				B0916D181EAFB05F000D443D /* AddCustomNotesController.swift */,
+			);
+			name = AddCustomNotes;
+			sourceTree = "<group>";
+		};
+		B0916D1B1EAFC799000D443D /* IBMWatsonCredentials */ = {
+			isa = PBXGroup;
+			children = (
+				B02D69111EA88FC500E27036 /* SpeechToTextCredentials.swift */,
+				B02D69131EA88FF400E27036 /* TextToSpeechCredentials.swift */,
+			);
+			name = IBMWatsonCredentials;
 			sourceTree = "<group>";
 		};
 		B0A8CF391E9DCA13002D06AC = {
@@ -107,18 +163,14 @@
 			children = (
 				B0A8CF451E9DCA13002D06AC /* AppDelegate.swift */,
 				B04EA0461E9DDBAB00BA12CE /* ViewController.swift */,
-				B01384CA1E9DCC5A008877DD /* BWWalkthroughViewController.swift */,
-				B01384CC1E9DCC5A008877DD /* BWWalkthroughPageViewController.swift */,
-				B01384C41E9DCC5A008877DD /* LoginController.swift */,
-				B01384C51E9DCC5A008877DD /* SignupController.swift */,
-				B01384C81E9DCC5A008877DD /* SignupandLoginNavController.swift */,
-				B01384C91E9DCC5A008877DD /* SignupandLoginViewController.swift */,
-				B01384CB1E9DCC5A008877DD /* CustomPageViewController.swift */,
-				B0FBD76B1EA05745003567A9 /* CoreDataController.swift */,
-				B0FBD7711EA0B977003567A9 /* HomePageController.swift */,
-				B07782D81EA1FC5700309625 /* AddItemViewController.swift */,
-				B0F65AD81EA307B000341A20 /* ProfileViewController.swift */,
-				B0F65ADA1EA3462800341A20 /* ChooseColorViewController.swift */,
+				B0916D1B1EAFC799000D443D /* IBMWatsonCredentials */,
+				B0B7D3601EAC032E000A75D2 /* CoreData */,
+				B0B7D3611EAC069D000A75D2 /* WelcomePage */,
+				B0B7D3621EAC06BC000A75D2 /* LoginSignUpPage */,
+				B0B7D3651EAC0750000A75D2 /* HomePage */,
+				B0B7D3631EAC06FC000A75D2 /* ProfilePage */,
+				B0916D1A1EAFB066000D443D /* AddCustomNotes */,
+				B0B7D3641EAC071D000A75D2 /* AddClassPage */,
 				B013850E1E9DD564008877DD /* Bridging-Header.h */,
 				B01384F01E9DCC81008877DD /* Main.storyboard */,
 				B01384C71E9DCC5A008877DD /* Walkthrough.storyboard */,
@@ -133,9 +185,78 @@
 			path = InstaPlan;
 			sourceTree = "<group>";
 		};
+		B0B7D3601EAC032E000A75D2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B032983B1EB006E5002491B8 /* InstaPlanUser+CoreDataClass.swift */,
+				B032983C1EB006E5002491B8 /* InstaPlanUser+CoreDataProperties.swift */,
+				B032983D1EB006E5002491B8 /* Assignment+CoreDataClass.swift */,
+				B032983E1EB006E5002491B8 /* Assignment+CoreDataProperties.swift */,
+				B032983F1EB006E5002491B8 /* Setting+CoreDataClass.swift */,
+				B03298401EB006E5002491B8 /* Setting+CoreDataProperties.swift */,
+				B03298411EB006E5002491B8 /* CustomNotes+CoreDataClass.swift */,
+				B03298421EB006E5002491B8 /* CustomNotes+CoreDataProperties.swift */,
+				B03298431EB006E5002491B8 /* Course+CoreDataClass.swift */,
+				B03298441EB006E5002491B8 /* Course+CoreDataProperties.swift */,
+				B0FBD76B1EA05745003567A9 /* CoreDataController.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		B0B7D3611EAC069D000A75D2 /* WelcomePage */ = {
+			isa = PBXGroup;
+			children = (
+				B01384CA1E9DCC5A008877DD /* BWWalkthroughViewController.swift */,
+				B01384CC1E9DCC5A008877DD /* BWWalkthroughPageViewController.swift */,
+				B01384CB1E9DCC5A008877DD /* CustomPageViewController.swift */,
+			);
+			name = WelcomePage;
+			sourceTree = "<group>";
+		};
+		B0B7D3621EAC06BC000A75D2 /* LoginSignUpPage */ = {
+			isa = PBXGroup;
+			children = (
+				B01384C41E9DCC5A008877DD /* LoginController.swift */,
+				B01384C51E9DCC5A008877DD /* SignupController.swift */,
+				B01384C81E9DCC5A008877DD /* SignupandLoginNavController.swift */,
+				B01384C91E9DCC5A008877DD /* SignupandLoginViewController.swift */,
+			);
+			name = LoginSignUpPage;
+			sourceTree = "<group>";
+		};
+		B0B7D3631EAC06FC000A75D2 /* ProfilePage */ = {
+			isa = PBXGroup;
+			children = (
+				B0F65AD81EA307B000341A20 /* ProfileViewController.swift */,
+				B0F65ADA1EA3462800341A20 /* ChooseColorViewController.swift */,
+			);
+			name = ProfilePage;
+			sourceTree = "<group>";
+		};
+		B0B7D3641EAC071D000A75D2 /* AddClassPage */ = {
+			isa = PBXGroup;
+			children = (
+				B028AFC71EA758F100112C72 /* AddClassController.swift */,
+				B02D690B1EA803F300E27036 /* PickWeekDaysController.swift */,
+			);
+			name = AddClassPage;
+			sourceTree = "<group>";
+		};
+		B0B7D3651EAC0750000A75D2 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				B0FBD7711EA0B977003567A9 /* HomePageController.swift */,
+				B07782D81EA1FC5700309625 /* AddItemViewController.swift */,
+			);
+			name = HomePage;
+			sourceTree = "<group>";
+		};
 		B4EB3D39041BA69BC75D87BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0558DAF1EA93A3100CEACC8 /* RestKit.framework */,
+				B0558DAC1EA934EB00CEACC8 /* TextToSpeechV1.framework */,
+				B02D690D1EA88E1C00E27036 /* SpeechToTextV1.framework */,
 				6584A37BB6B6B4998A2B3163 /* Pods_InstaPlan.framework */,
 			);
 			name = Frameworks;
@@ -154,6 +275,7 @@
 				B0A8CF401E9DCA13002D06AC /* Resources */,
 				F84131C73059B25ADF336515 /* [CP] Embed Pods Frameworks */,
 				37AD9783E477B94AA4CEBDD9 /* [CP] Copy Pods Resources */,
+				B0558DAE1EA939AB00CEACC8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -247,6 +369,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaPlan/Pods-InstaPlan-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B0558DAE1EA939AB00CEACC8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/TextToSpeechV1.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RestKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SpeechToTextV1.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		F84131C73059B25ADF336515 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,14 +407,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03298491EB006E5002491B8 /* Setting+CoreDataClass.swift in Sources */,
 				B04EA0471E9DDBAB00BA12CE /* ViewController.swift in Sources */,
+				B032984C1EB006E5002491B8 /* CustomNotes+CoreDataProperties.swift in Sources */,
+				B032984A1EB006E5002491B8 /* Setting+CoreDataProperties.swift in Sources */,
 				B0A8CF4E1E9DCA13002D06AC /* InstaPlan.xcdatamodeld in Sources */,
+				B03298481EB006E5002491B8 /* Assignment+CoreDataProperties.swift in Sources */,
+				B0916D191EAFB05F000D443D /* AddCustomNotesController.swift in Sources */,
+				B032984D1EB006E5002491B8 /* Course+CoreDataClass.swift in Sources */,
+				B02D69141EA88FF400E27036 /* TextToSpeechCredentials.swift in Sources */,
 				B01384CE1E9DCC5A008877DD /* LoginController.swift in Sources */,
 				B01384D21E9DCC5A008877DD /* SignupandLoginViewController.swift in Sources */,
 				B0F65AD91EA307B000341A20 /* ProfileViewController.swift in Sources */,
+				B02D690C1EA803F300E27036 /* PickWeekDaysController.swift in Sources */,
+				B03298471EB006E5002491B8 /* Assignment+CoreDataClass.swift in Sources */,
 				B01384D31E9DCC5A008877DD /* BWWalkthroughViewController.swift in Sources */,
+				B028AFC81EA758F100112C72 /* AddClassController.swift in Sources */,
+				B032984E1EB006E5002491B8 /* Course+CoreDataProperties.swift in Sources */,
+				B02D69121EA88FC500E27036 /* SpeechToTextCredentials.swift in Sources */,
+				B032984B1EB006E5002491B8 /* CustomNotes+CoreDataClass.swift in Sources */,
 				B07782D91EA1FC5700309625 /* AddItemViewController.swift in Sources */,
 				B0FBD7721EA0B977003567A9 /* HomePageController.swift in Sources */,
+				B03298461EB006E5002491B8 /* InstaPlanUser+CoreDataProperties.swift in Sources */,
 				B01384CF1E9DCC5A008877DD /* SignupController.swift in Sources */,
 				B0FBD76C1EA05745003567A9 /* CoreDataController.swift in Sources */,
 				B0F65ADB1EA3462800341A20 /* ChooseColorViewController.swift in Sources */,
@@ -284,6 +436,7 @@
 				B01384D11E9DCC5A008877DD /* SignupandLoginNavController.swift in Sources */,
 				B01384D41E9DCC5A008877DD /* CustomPageViewController.swift in Sources */,
 				B01384D51E9DCC5A008877DD /* BWWalkthroughPageViewController.swift in Sources */,
+				B03298451EB006E5002491B8 /* InstaPlanUser+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +559,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/InstaPlan",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = InstaPlan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -426,6 +580,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/InstaPlan",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = InstaPlan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

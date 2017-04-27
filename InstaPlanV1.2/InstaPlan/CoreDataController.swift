@@ -11,6 +11,7 @@ import CoreData
 
 var currentUserName: String!
 var currentUserEmail: String!
+var current_user: InstaPlanUser!
 
 class CoreDataController: NSObject {
     
@@ -22,23 +23,26 @@ class CoreDataController: NSObject {
         return appDelegate.persistentContainer.viewContext
     }
     
+    
     ///
     ///Store user information
     ///
+    
     func storeUser(user_name: String, email_address: String, password: String) {
         let context = getContext()
         
         //define the entity
         let entity = NSEntityDescription.entity(forEntityName: "InstaPlanUser", in: context)
         
-        let user = NSManagedObject(entity: entity!, insertInto: context)
+        let user = NSManagedObject(entity: entity!, insertInto: context) as! InstaPlanUser
         
         currentUserName = user_name
+        current_user = user
         
-        user.setValue(user_name, forKey: "user_name")
-        user.setValue(email_address, forKey: "email_address")
-        user.setValue(password, forKey: "password")
-        user.setValue(true, forKey: "login_status")
+        user.user_name = user_name
+        user.email_address = email_address
+        user.password = password
+        user.login_status = true
         
         do{
             try context.save()
@@ -47,6 +51,7 @@ class CoreDataController: NSObject {
             print(error)
         }
     }
+
     
     ///
     ///Sign up input check
@@ -63,6 +68,7 @@ class CoreDataController: NSObject {
                 print("This is the email address: ", email)
                 if email_address == email {
                     currentUserName = item.value(forKey: "user_name") as! String
+                    current_user = item as! InstaPlanUser
                     return false
                 }
             }
@@ -88,6 +94,7 @@ class CoreDataController: NSObject {
                 if email == email_address && password == password {
                     currentUserEmail = email_address
                     currentUserName = item.value(forKey: "user_name") as! String
+                    current_user = item as! InstaPlanUser
                     return true
                 }
             }
@@ -137,5 +144,85 @@ class CoreDataController: NSObject {
     ///
     func getEmailAddress() -> String {
         return currentUserEmail
+    }
+    
+    ///
+    ///Store user profile settings
+    ///
+    func store_settings(task_num: Int16, notification: Int16, class_color: String, assignment_color: String, task_color: String) {
+        
+        let context = getContext()
+        
+        //define the entity
+        let entity = NSEntityDescription.entity(forEntityName: "Setting", in: context)
+        
+        let settings = NSManagedObject(entity: entity!, insertInto: context) as! Setting
+        
+        settings.assignment_color = assignment_color
+        settings.class_color = class_color
+        settings.notification = notification
+        settings.homepage_task_num = task_num
+        settings.task_color = task_color
+        settings.user = current_user
+        
+        do{
+            try context.save()
+            
+        }catch{
+            print(error)
+        }
+    }
+    
+    ///
+    ///Store user class information
+    ///
+    func storeClass(class_name: String, class_time: String, class_color: String, class_day: String, class_end_date: NSDate?, instructor_ta_info: String, additional_info: String) {
+        
+        let context = getContext()
+        
+        //define the entity
+        let entity = NSEntityDescription.entity(forEntityName: "Course", in: context)
+        
+        let course = NSManagedObject(entity: entity!, insertInto: context) as! Course
+        
+        course.class_color = class_color
+        course.class_time = class_time
+        course.class_day = class_day
+        course.instructor_ta_info = instructor_ta_info
+        course.aditional_info = additional_info
+        course.class_end_date = class_end_date
+        course.class_name = class_name
+    
+        course.user = current_user
+        
+        do{
+            try context.save()
+            
+        }catch{
+            print(error)
+        }
+
+    }
+    
+    ///
+    ///Store custom notes
+    ///
+    func storeCustomNotes(custom_notes: String) {
+        let context = getContext()
+        
+        //define the entity
+        let entity = NSEntityDescription.entity(forEntityName: "CustomNotes", in: context)
+        
+        let notes = NSManagedObject(entity: entity!, insertInto: context) as! CustomNotes
+        
+        notes.notes = custom_notes
+        
+        notes.user = current_user
+        
+        do{
+            try context.save()
+        }catch{
+            print(error)
+        }
     }
 }
