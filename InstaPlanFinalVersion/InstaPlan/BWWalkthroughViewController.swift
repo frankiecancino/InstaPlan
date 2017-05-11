@@ -293,5 +293,4 @@ import UIKit
     override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         adjustOffsetForTransition()
     }
-    
 }

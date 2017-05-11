@@ -14,7 +14,7 @@
 		B006D4EA1EB5B38100509C61 /* CourseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006D4E91EB5B38100509C61 /* CourseDetails.swift */; };
 		B006D4EC1EB5B39E00509C61 /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006D4EB1EB5B39E00509C61 /* SearchTableCell.swift */; };
 		B006D4EE1EB5B46E00509C61 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006D4ED1EB5B46E00509C61 /* SearchController.swift */; };
-		B01384CD1E9DCC5A008877DD /* SignupandLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01384C31E9DCC5A008877DD /* SignupandLogin.storyboard */; };
+		B01384CD1E9DCC5A008877DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01384C31E9DCC5A008877DD /* Main.storyboard */; };
 		B01384CE1E9DCC5A008877DD /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01384C41E9DCC5A008877DD /* LoginController.swift */; };
 		B01384CF1E9DCC5A008877DD /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01384C51E9DCC5A008877DD /* SignupController.swift */; };
 		B01384D01E9DCC5A008877DD /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01384C71E9DCC5A008877DD /* Walkthrough.storyboard */; };
@@ -23,7 +23,6 @@
 		B01384D31E9DCC5A008877DD /* BWWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01384CA1E9DCC5A008877DD /* BWWalkthroughViewController.swift */; };
 		B01384D41E9DCC5A008877DD /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01384CB1E9DCC5A008877DD /* CustomPageViewController.swift */; };
 		B01384D51E9DCC5A008877DD /* BWWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01384CC1E9DCC5A008877DD /* BWWalkthroughPageViewController.swift */; };
-		B01384F11E9DCC81008877DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01384F01E9DCC81008877DD /* Main.storyboard */; };
 		B01527281E9DF171009417C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B01527271E9DF171009417C8 /* GoogleService-Info.plist */; };
 		B01B6D3F1E9ED00B009AF220 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01B6D3E1E9ED00B009AF220 /* HomePage.storyboard */; };
 		B028AFC81EA758F100112C72 /* AddClassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028AFC71EA758F100112C72 /* AddClassController.swift */; };
@@ -68,7 +67,7 @@
 		B006D4E91EB5B38100509C61 /* CourseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetails.swift; sourceTree = "<group>"; };
 		B006D4EB1EB5B39E00509C61 /* SearchTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
 		B006D4ED1EB5B46E00509C61 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
-		B01384C31E9DCC5A008877DD /* SignupandLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignupandLogin.storyboard; sourceTree = "<group>"; };
+		B01384C31E9DCC5A008877DD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B01384C41E9DCC5A008877DD /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B01384C51E9DCC5A008877DD /* SignupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
 		B01384C71E9DCC5A008877DD /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
@@ -77,7 +76,6 @@
 		B01384CA1E9DCC5A008877DD /* BWWalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughViewController.swift; sourceTree = "<group>"; };
 		B01384CB1E9DCC5A008877DD /* CustomPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		B01384CC1E9DCC5A008877DD /* BWWalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughPageViewController.swift; sourceTree = "<group>"; };
-		B01384F01E9DCC81008877DD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B013850E1E9DD564008877DD /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		B01527271E9DF171009417C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B01B6D3E1E9ED00B009AF220 /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
@@ -205,9 +203,8 @@
 				B006D4E01EB516FA00509C61 /* CustomNotes */,
 				B0B7D3641EAC071D000A75D2 /* AddClassPage */,
 				B006D4E81EB5B2F500509C61 /* Search */,
-				B01384F01E9DCC81008877DD /* Main.storyboard */,
 				B01384C71E9DCC5A008877DD /* Walkthrough.storyboard */,
-				B01384C31E9DCC5A008877DD /* SignupandLogin.storyboard */,
+				B01384C31E9DCC5A008877DD /* Main.storyboard */,
 				B0A8CF511E9DCA13002D06AC /* LaunchScreen.storyboard */,
 				B01B6D3E1E9ED00B009AF220 /* HomePage.storyboard */,
 				B013850E1E9DD564008877DD /* Bridging-Header.h */,
@@ -371,12 +368,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B01384F11E9DCC81008877DD /* Main.storyboard in Resources */,
 				B0A8CF531E9DCA13002D06AC /* LaunchScreen.storyboard in Resources */,
 				B0A8CF501E9DCA13002D06AC /* Assets.xcassets in Resources */,
 				B01384D01E9DCC5A008877DD /* Walkthrough.storyboard in Resources */,
 				B01B6D3F1E9ED00B009AF220 /* HomePage.storyboard in Resources */,
-				B01384CD1E9DCC5A008877DD /* SignupandLogin.storyboard in Resources */,
+				B01384CD1E9DCC5A008877DD /* Main.storyboard in Resources */,
 				B01527281E9DF171009417C8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

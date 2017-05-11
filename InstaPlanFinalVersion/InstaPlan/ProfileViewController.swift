@@ -11,7 +11,7 @@ import UIKit
 var chooseColorFrom: String!
 
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, BWWalkthroughViewControllerDelegate{
     
     @IBOutlet weak var user_name: UILabel!
 
@@ -56,8 +56,47 @@ class ProfileViewController: UIViewController {
    
     @IBAction func log_out(_ sender: Any) {
         CoreDataController().resetLoginStatus(email_address: email_address.text!)
-        let mainpage = UIStoryboard(name: "SignupandLogin", bundle: nil)
+        let mainpage = UIStoryboard(name: "Main", bundle: nil)
         let vc = mainpage.instantiateInitialViewController()
         show(vc!, sender: self)
     }
+    
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let userDefaults = UserDefaults.standard
+        
+        if !userDefaults.bool(forKey: "walkthroughPresented") {
+            
+            showWalkthrough()
+            
+            userDefaults.set(true, forKey: "walkthroughPresented")
+            userDefaults.synchronize()
+        }
+        
+    }
+    
+    
+    @IBAction func showWalkthrough(){
+        
+        // Get view controllers and build the walkthrough
+        let stb = UIStoryboard(name: "Walkthrough", bundle: nil)
+        let walkthrough = stb.instantiateViewController(withIdentifier: "welcome") as! BWWalkthroughViewController
+        let page_zero = stb.instantiateViewController(withIdentifier: "welcome0")
+        let page_one = stb.instantiateViewController(withIdentifier: "welcome1")
+        let page_two = stb.instantiateViewController(withIdentifier: "welcome2")
+        let page_three = stb.instantiateViewController(withIdentifier: "welcome3")
+        
+        // Attach the pages to the master
+        walkthrough.delegate = self
+        walkthrough.add(viewController:page_one)
+        walkthrough.add(viewController:page_two)
+        walkthrough.add(viewController:page_three)
+        walkthrough.add(viewController:page_zero)
+        
+        self.present(walkthrough, animated: true, completion: nil)
+    }
+
 }

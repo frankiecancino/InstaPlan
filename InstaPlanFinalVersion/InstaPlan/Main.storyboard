@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -130,7 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="playback" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DS-ik-iEF">
-                                <rect key="frame" x="37" y="479" width="63" height="32"/>
+                                <rect key="frame" x="36" y="481" width="63" height="32"/>
                                 <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="20"/>
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" red="0.98419767618179321" green="0.98888343572616577" blue="0.95547562837600708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -139,20 +140,8 @@
                                     <segue destination="4XF-4C-v5B" kind="show" id="CAv-QJ-Enl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to InstaPlane, if you don't have an account, please sign up first, if you have, please login..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWl-fr-AgH">
-                                <rect key="frame" x="37" y="369" width="300" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="mfj-r6-cSg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="20"/>
-                                <color key="textColor" red="0.98419767618179321" green="0.98888343572616577" blue="0.95547562837600708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_words" translatesAutoresizingMaskIntoConstraints="NO" id="PCd-m1-DZ1">
-                                <rect key="frame" x="87" y="104" width="200" height="235"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6d-fb-XBc">
-                                <rect key="frame" x="291" y="479" width="46" height="32"/>
+                                <rect key="frame" x="293" y="481" width="46" height="32"/>
                                 <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="20"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.98419767618179321" green="0.98888343572616577" blue="0.95547562837600708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -162,21 +151,30 @@
                                     <segue destination="AA4-sD-9ev" kind="show" id="pnu-AK-CcG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to InstaPlan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsc-TM-7zX">
+                                <rect key="frame" x="33" y="144" width="308.5" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_words" translatesAutoresizingMaskIntoConstraints="NO" id="PCd-m1-DZ1">
+                                <rect key="frame" x="87" y="207" width="200" height="244"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PCd-m1-DZ1" secondAttribute="height" multiplier="50:61" id="AAg-ht-TXH"/>
+                                    <constraint firstAttribute="width" constant="200" id="Bkk-NI-VmH"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.20555472373962402" green="0.81928962469100952" blue="0.68103748559951782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ax4-6y-mRd" firstAttribute="top" secondItem="2DS-ik-iEF" secondAttribute="bottom" constant="156" id="2tK-KH-ygI"/>
-                            <constraint firstItem="aWl-fr-AgH" firstAttribute="leading" secondItem="2DS-ik-iEF" secondAttribute="leading" id="6sc-DG-PWL"/>
-                            <constraint firstItem="PCd-m1-DZ1" firstAttribute="centerX" secondItem="99b-J9-E1V" secondAttribute="centerX" id="8I7-x1-lco"/>
-                            <constraint firstItem="PCd-m1-DZ1" firstAttribute="centerX" secondItem="aWl-fr-AgH" secondAttribute="centerX" id="8ks-ig-czh"/>
-                            <constraint firstItem="2DS-ik-iEF" firstAttribute="top" secondItem="h6d-fb-XBc" secondAttribute="top" id="L5k-0l-lHC"/>
-                            <constraint firstItem="PCd-m1-DZ1" firstAttribute="top" secondItem="kwR-di-A9u" secondAttribute="bottom" constant="40" id="PYn-4l-wBh"/>
-                            <constraint firstItem="PCd-m1-DZ1" firstAttribute="leading" secondItem="99b-J9-E1V" secondAttribute="leadingMargin" constant="71" id="TQC-3L-cEM"/>
-                            <constraint firstItem="2DS-ik-iEF" firstAttribute="baseline" secondItem="h6d-fb-XBc" secondAttribute="baseline" id="fXu-36-jhO"/>
-                            <constraint firstItem="aWl-fr-AgH" firstAttribute="leading" secondItem="99b-J9-E1V" secondAttribute="leadingMargin" constant="21" id="lCk-4y-hfq"/>
-                            <constraint firstItem="aWl-fr-AgH" firstAttribute="trailing" secondItem="h6d-fb-XBc" secondAttribute="trailing" id="si1-DE-4Ly"/>
-                            <constraint firstItem="2DS-ik-iEF" firstAttribute="top" secondItem="aWl-fr-AgH" secondAttribute="bottom" constant="50" id="uJd-hE-PP9"/>
-                            <constraint firstItem="aWl-fr-AgH" firstAttribute="top" secondItem="PCd-m1-DZ1" secondAttribute="bottom" constant="30" id="yFM-JV-T5y"/>
+                            <constraint firstItem="lsc-TM-7zX" firstAttribute="top" secondItem="kwR-di-A9u" secondAttribute="bottom" constant="80" id="3da-64-5Nh"/>
+                            <constraint firstItem="PCd-m1-DZ1" firstAttribute="centerX" secondItem="99b-J9-E1V" secondAttribute="centerX" id="3v8-fR-fyz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h6d-fb-XBc" secondAttribute="trailing" constant="20" id="DuN-rm-iZZ"/>
+                            <constraint firstItem="lsc-TM-7zX" firstAttribute="centerX" secondItem="99b-J9-E1V" secondAttribute="centerX" id="Nwg-o8-mZS"/>
+                            <constraint firstItem="PCd-m1-DZ1" firstAttribute="top" secondItem="lsc-TM-7zX" secondAttribute="bottom" constant="27" id="YUf-9q-qBB"/>
+                            <constraint firstItem="2DS-ik-iEF" firstAttribute="top" secondItem="PCd-m1-DZ1" secondAttribute="bottom" constant="30" id="ct4-Wn-DRH"/>
+                            <constraint firstItem="h6d-fb-XBc" firstAttribute="top" secondItem="PCd-m1-DZ1" secondAttribute="bottom" constant="30" id="h0G-e0-EEB"/>
+                            <constraint firstItem="2DS-ik-iEF" firstAttribute="leading" secondItem="99b-J9-E1V" secondAttribute="leadingMargin" constant="20" id="inB-81-gUq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="InstaPlan" id="e9s-MZ-52X"/>
@@ -296,7 +294,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ipo-Wl-Nke" customClass="SignupandLoginNavController" customModule="InstaPlan" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sD9-DW-iu5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sD9-DW-iu5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

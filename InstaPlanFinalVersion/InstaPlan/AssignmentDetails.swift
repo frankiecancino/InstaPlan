@@ -248,8 +248,13 @@ class AssignmentDetails: UIViewController, UIPickerViewDelegate {
         let todayView = storyBoard.instantiateViewController(withIdentifier: "startPoint")
         
         self.present(todayView, animated: true, completion: nil)
-        
-        backfrom = "Search"
+        if from_todo {
+            backfrom = "Todo"
+        }
+        else{
+            backfrom = "Search"
+        }
+        from_todo = false
     }
     
     

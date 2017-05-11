@@ -84,14 +84,14 @@ class CoreDataController: NSObject {
     ///prameter: user input email address and password
     ///return false is no match user in core data
     ///
-    func loginCheck(email_address: String, password: String) -> Bool {
+    func loginCheck(email_address: String, psd: String) -> Bool {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "InstaPlanUser")
         do{
             let searchResuls = try getContext().fetch(fetchRequest)
             for item in (searchResuls as! [NSManagedObject]){
                 let email = item.value(forKey: "email_address") as! String
                 let password = item.value(forKey: "password") as! String
-                if email == email_address && password == password {
+                if email == email_address && password == psd {
                     currentUserEmail = email_address
                     currentUserName = item.value(forKey: "user_name") as! String
                     current_user = item as! InstaPlanUser

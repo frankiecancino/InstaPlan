@@ -24,6 +24,9 @@ class NoteDetailController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        note.layer.borderWidth = 5
+        note.layer.borderColor = UIColor.lightGray.cgColor
+        note.layer.cornerRadius = 10
         if notefrom {
             note_title.text = search_notes[search_index].note_name
             note.text = search_notes[search_index].notes_content

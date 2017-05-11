@@ -16,6 +16,9 @@ class AddCustomNotesController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.layer.borderWidth = 5
+        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.layer.cornerRadius = 10
     }
     
     func goback() {

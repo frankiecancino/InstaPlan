@@ -7,10 +7,10 @@
 //
 
 import UIKit
-
+var from_todo: Bool = false
 class Todo: UITableViewController {
 
-    var assignments: [Assignment] = CoreDataController().getassignment_object(assignments: CoreDataController().getAssignments())
+    //var todo_assignments: [Assignment] = CoreDataController().getassignment_object(assignments: CoreDataController().getAssignments())
     
     var filteredAssignments: [Assignment] = []
 
@@ -32,7 +32,8 @@ class Todo: UITableViewController {
     }
     
     func sort_assignment_with_due_date() {
-        filterAssignments(all: assignments)
+        let todo_assignments: [Assignment] = CoreDataController().getassignment_object(assignments: CoreDataController().getAssignments())
+        filterAssignments(all: todo_assignments)
         for index1 in 0..<filteredAssignments.count{
             for index2 in index1..<filteredAssignments.count{
                 if filteredAssignments[index1].due_date! as Date > filteredAssignments[index2].due_date! as Date {
@@ -45,7 +46,8 @@ class Todo: UITableViewController {
     }
     
     func sort_assignment_with_priority() {
-        filterAssignments(all: assignments)
+        let todo_assignments: [Assignment] = CoreDataController().getassignment_object(assignments: CoreDataController().getAssignments())
+        filterAssignments(all: todo_assignments)
         for index1 in 0..<filteredAssignments.count{
             for index2 in index1..<filteredAssignments.count{
                 if filteredAssignments[index1].priority < filteredAssignments[index2].priority {
@@ -82,6 +84,22 @@ class Todo: UITableViewController {
         let due_date_string = formatter.string(from: filteredAssignments[indexPath.section].due_date! as Date)
         cell.due_date.text = "Due @" + due_date_string
         cell.class_name.text = "Class: " + filteredAssignments[indexPath.section].class_name!
+        switch filteredAssignments[indexPath.section].color! {
+        case "Red":
+            cell.color.backgroundColor = UIColor.red
+        case "Orange":
+            cell.color.backgroundColor = UIColor.orange
+        case "Yellow":
+            cell.color.backgroundColor = UIColor.yellow
+        case "Green":
+            cell.color.backgroundColor = UIColor.green
+        case "Blue":
+            cell.color.backgroundColor = UIColor.blue
+        default:
+            cell.color.backgroundColor = UIColor.white
+        }
+        cell.color.layer.borderWidth = 1
+        cell.color.layer.borderColor = UIColor.lightGray.cgColor
         return cell
     }
     
@@ -121,6 +139,18 @@ class Todo: UITableViewController {
         }
         tableView.reloadData()
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        from_todo = true
+        assignments = filteredAssignments
+        search_index = indexPath.section
+        let storyBoard: UIStoryboard = UIStoryboard(name: "HomePage", bundle: nil)
+        
+        let todayView = storyBoard.instantiateViewController(withIdentifier: "assignmentDetails")
+        
+        self.present(todayView, animated: true, completion: nil)
+    }
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {

@@ -12,6 +12,8 @@ class todoAssignments: UITableViewCell {
 
     @IBOutlet weak var due_date: UILabel!
     
+    @IBOutlet weak var color: UILabel!
+    
     @IBOutlet weak var class_name: UILabel!
     
     override func awakeFromNib() {

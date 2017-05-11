@@ -132,7 +132,7 @@ class LoginController: UIViewController, GIDSignInUIDelegate{
         }
         else{
             //check user information and store it
-            if CoreDataController().loginCheck(email_address: email!, password: psd!) {
+            if CoreDataController().loginCheck(email_address: email!, psd: psd!) {
                 self.jumpToMainPage()
             }
             else{

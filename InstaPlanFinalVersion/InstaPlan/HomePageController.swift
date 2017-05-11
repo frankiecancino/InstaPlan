@@ -22,12 +22,10 @@ class HomePageController: UITabBarController {
         
         switch backfrom {
         case "Search":
-            self.selectedIndex = 4
-        case "Notes":
             self.selectedIndex = 3
-        case "Todo":
+        case "Notes":
             self.selectedIndex = 2
-        case "Sechdule":
+        case "Todo":
             self.selectedIndex = 1
         default:
             self.selectedIndex = 0
